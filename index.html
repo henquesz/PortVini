@@ -2,518 +2,979 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Vinicius Henques</title>
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/avatar.jpg" type="image/x-icon">
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <title>Portfolio Vinicius Henques</title>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Vinicius Henques</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list gird">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user-circle nav__icon"></i> About-me
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-atom nav__icon"></i> skills
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">
-                            <i class="uil uil-briefcase nav__icon"></i> Services
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-atom nav__icon"></i> Portfólio
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-comments nav__icon"></i> Contact-me
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/avatar.jpg" alt="Vinicius Henques" width="80" style="border-radius:15px;">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Vinicius Henques</h1>
+
+          <p class="title">Fullstack Enginner</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <div class="nav__btns">
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:henquesvinicius@gmail.com" class="contact-link">henquesvinicius@gmail.com</a>
             </div>
-        </nav>
-    </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/vinicius-henques-5a843a1b9/" target="_blank"
-                            class="home__social-icon">
-                            <i class="uil uil-linkedin"></i>
-                        </a>
+          </li>
 
-                        <a href="instagram.com/henquesz.io" target="_blank" class="home__social-icon">
-                            <i class="uil uil-instagram"></i>
-                        </a>
+          <li class="contact-item">
 
-                        <a href="https://github.com/henquesz" target="_blank" class="home__social-icon">
-                            <i class="uil uil-github"></i>
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <!-- <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                    <image class="home__blob-img" x="12" y="-40" xlink:href="assets/img/perfil.png"/>
-                                </g>
-                            </svg> -->
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home__title">Hi, i'am Vinicius</h1>
-                        <h3 class="home__subtitle">Fullstack developer</h3>
-                        <p class="home__description">Studying Analysis and systems development at Etec Horácio Augusto
-                            da Silveira, together with the 100% Full stack Developer course at
-                            Fullture School, Agile certificate at Mackenzie University with Scrum, always seeking broad
-                            knowledge in languages ​​and methodologies!</p>
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-processor home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div>
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-        </section>
 
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My introduction</span>
-            <div class="about__container container grid">
-                <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
+            <div class="contact-info">
+              <p class="contact-title">Whatsapp</p>
 
-                <div class="about__data">
-                    <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                        vestibulum lacus turpis, vel aliquet dui gravida id. Vivamus eget nulla non erat ullamcorper
-                        interdum. Sed at finibus sapien. Fusce felis nisl, maximus sed justo vel, porttitor bibendum
-                        mauris. Nunc posuere mi a libero eleifend, consectetur euismod urna dapibus.
-                        Sed a lacus a nisl eleifend luctus quis id nisi. Maecenas malesuada congue erat. Cras placerat
-                        ante in ullamcorper tristique.</p>
-
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">02+</span>
-                            <span class="about__info-name">Years <br> Experience</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">03+</span>
-                            <span class="about__info-name">Completed <br> Project</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">01+</span>
-                            <span class="about__info-name">Companies <br> Worked</span>
-                        </div>
-                    </div>
-                    <div class="about_buttons">
-                        <a download="" href="assets/pdf/ViniCV.pdf" class="button button--flex">
-                            Download CV<i class="uil uil-file-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
+              <a href="tel:+5511962959309" class="contact-link">+55 (11) 96295-9309</a>
             </div>
-        </section>
 
-        <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My tech skills</span>
+          </li>
 
-            <div class="skills__container container grid">
-                <div>
-                    <!--==================== SKILL 1 ====================-->
-                    <div class="skills__content skills__open">
-                        <i class="uil uil-brackets-curly skills__icon"></i>
-                        <div class="skills__header">
-                            <div>
-                                <h1 class="skills__titles">Backend developer</h1>
-                                <span class="skills__subtitle">More than 3+ years</span>
+          <li class="contact-item">
 
-                                <i class="uil uil-angle-double-down skills__arrow"></i>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Kotlin</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__kotlin"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">C# - .NET || Xamarin Forms</h3>
-                                            <span class="skills__number">90%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__c"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Java || Spring Boot</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__java"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Flutter</h3>
-                                            <span class="skills__number">50%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__flutter"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">NodeJS | Sequelize</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__node"></span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!--==================== SKILL 2 ====================-->
-                    <div class="skills__content skills__close">
-                        <i class="uil uil-desktop skills__icon"></i>
-                        <div class="skills__header">
-
-                            <div>
-                                <h1 class="skills__title">Fronted developer</h1>
-                                <span class="skills__subtitle">More than 3+ years</span>
-
-                                <i class="uil uil-angle-double-down skills__arrow"></i>
-
-                                <div class="skills__list grid">
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">JavaScript</h3>
-                                            <span class="skills__number">90%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__js"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">React</h3>
-                                            <span class="skills__number">50%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__react"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Vue</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__vue"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--==================== SKILL 3 ====================-->
-                    <div class="skills__content skills__close">
-                        <i class="uil uil-server-network-alt skills__icon"></i>
-                        <div class="skills__header">
-
-                            <div>
-                                <h1 class="skills__title">Developer - Others</h1>
-                                <span class="skills__subtitle">More than 1 years</span>
-
-                                <i class="uil uil-angle-double-down skills__arrow"></i>
-
-                                <div class="skills__list grid">
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">AWS - Cloud Computing</h3>
-                                            <span class="skills__number">50%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__aws"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">DevOps SRE</h3>
-                                            <span class="skills__number">50%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__devops"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--==================== SKILL 4 ====================-->
-                    <div class="skills__content skills__close">
-                        <i class="uil uil-palette skills__icon"></i>
-                        <div class="skills__header">
-
-                            <div>
-                                <h1 class="skills__title">Design</h1>
-                                <span class="skills__subtitle">More than 2+ years</span>
-
-                                <i class="uil uil-angle-double-down skills__arrow"></i>
-
-                                <div class="skills__list grid">
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Photoshop</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__photoshop"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">Figma</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__figma"></span>
-                                        </div>
-                                    </div>
-                                    <!-- - -->
-                                    <div class="skills__data">
-                                        <div class="skills_titles">
-                                            <h3 class="skills__name">UI/UX</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__uiux"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-        </section>
 
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-            <h2 class="section__title">Qualifications</h2>
-            <span class="section__subtitle">My personal journey</span>
+            <div class="contact-info">
+              <p class="contact-title">Aniversário</p>
 
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
-
-                <div class="qualification__sections">
-                    <!--==================== QUALIFICATION CONTENT ====================-->
-                    <div class="qualification__content">
-
-                        <!--==================== QUALIFICATION 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Analise e Desenvolvimento de Sistemas</h3>
-                                <span class="qualification__subtitle">Brasil - Etec Horácio Augusto da Silveira</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calender"></i>
-                                    2020 - 2022
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                         <!--==================== QUALIFICATION 2 ====================-->
-                         <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Fullstack Developer</h3>
-                                <span class="qualification__subtitle">Brasil - Fullture School</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calender"></i>
-                                    2020 - 2021
-                                </div>
-                            </div>
-
-                        </div>
-
-                         <!--==================== QUALIFICATION 3 ====================-->
-                         <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Agile Project Management </h3>
-                                <span class="qualification__subtitle">Brasil - Mackenzie University</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calender"></i>
-                                    2021 - 2021
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="qualification__content">
-
-                        <!--==================== QUALIFICATION 1 ====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Fullstack Enginner jr</h3>
-                                <span class="qualification__subtitle">Brasil - Gennex Software</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calender"></i>
-                                    2022 - 202?
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+              <time datetime="1982-06-23">Out 05, 2004</time>
             </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>São Paulo, Brasil</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/henquesz" class="social-link" target="__blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vinicius-henques-5a843a1b9/" class="social-link" target="__blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/henquesz.io" class="social-link" target="__blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Sou um Desenvolvedor de software nascido no brasil, 18 anos, mindset ágil e de crescimento com rápido
+            aprendizado, sempre buscando conhecimento amplo em linguagens e metodologias.
+            <!-- I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs. -->
+          </p>
+
+          <p>
+            Cursando Analise e desenvolvimento de sistemas na Etec Horácio Augusto da Silveira, com formação no curso
+            com bolsa de 100% como Desenvolvedor Full stack na Fullture School, onde atuei em projetos que variam desde
+            back-end em Java, ReactJS, NodeJS, Aplicativos mobile em Kotlin, Flutter e Swift, até mesmo em módulos de
+            DevOps SRE, DataScience e Cloud Computing em Amazon Web Services e muito mais.
+            Certificado de Ágile na universidade Mackenzie com Scrum.
+          </p>
         </section>
 
-        <!--==================== SERVICES ====================-->
-        <section class="services section" id="services">
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Sou focado em</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.png
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desktop development</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de aplicações desktop nativas, utilizando c# em Visual Studio.<br>
+                  POO.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.png" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de sites/aplicações utilizando diversas linguagens e frameworks, como React, Vue,
+                  NodeJS, Java, Javascript, tudo junto a um amplo conhecimento em API'S.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.png" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de aplicativos mobile em Kotlin e C# com xamarin forms, conto com um pequeno
+                  conhecimento em Flutter e Swift com Dart.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Design</h4>
+
+                <p class="service-item-text">
+                  Conhecimento em UI/UX, desenvolvendo diversos designs e prototipagens para aplicações no geral,
+                  utilizando Photoshop e Figma.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
 
         </section>
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testemunhas</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item" href="">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/breno.jpg" alt="Breno Ribas" width="60" style="border-radius:15px ;"
+                    data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Breno Ribas</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Tive a oportunidade de trabalhar com Vinicius na squad de desenvolvimento web. Apesar de ser um
+                    jovem desenvolvedor, fiquei surpreendido com o talento em back-end utilizando Kotlin e C#. Muito
+                    competente, parceiro e responsável, tem um futuro brilhante pela frente, agregará muito em qualquer
+                    empresa que estiver.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/gui.jpg" alt="Guilherme Ferroni" width="60" style="border-radius:15px ;"
+                    data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Guilherme Ferroni</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    É raro encontrar alguém tão novo e já preparado para o mercado como o Vinicius. Possui qualidades
+                    fundamentais em para agregar muito qualquer equip. Destaco a sua resiliência, empatia, simpatia e
+                    excelente capacidade de comunicação. Trabalhamos juntos em projetos dentro da empresa e considero
+                    que o Vinicius tem todas as condições para evoluir rapidamente na sua carreira, constituindo um
+                    ativo de enorme valor para qualquer organização.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/mah.jpg" alt="Marcella Rappoli Bedinelli" width="60"
+                    style="border-radius:15px ;" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Marcella Rappoli Bedinelli</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Vinicius é muito prestativo e produtivo, além de ter muito conhecimento na área em que atua. Sempre
+                    profissional e fazendo o melhor de si.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
 
         </section>
 
-        <!--==================== PROJECT IN MIND ====================-->
-        <section class="project section">
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" style="border-radius:15px ;"
+                  data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon" id="quote">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Educação</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Agile - Universidade Mackenzie (EAD)</h4>
+
+              <span>2021 — 2021</span>
+
+              <p class="timeline-text">
+                Gerenciamento ágil e aplicação dos princípios do
+                desenvolvimento de software ágil a vários processos de
+                gerenciamento, por exemplo o Scrum.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Etec Professor Horácio Augusto da Silveira</h4>
+
+              <span>2020 — 2022</span>
+
+              <p class="timeline-text">
+                Ensino Médio integrado ao técnico - ADS
+                Imerso a diversas matérias do ensino médio juntamente a do curso,
+                por exemplo, Back-end C#, Banco de dados, desenvolvimento de
+                aplicativos mobile e diversas outras matérias.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Full Stack Developer - Fullture School</h4>
+
+              <span>2020 — 2021</span>
+
+              <p class="timeline-text">
+                Curso de desenvolvimento Full Stack, Englobando todas
+                as áreas e especializações de desenvolvimento, desde back-end a
+                Front-end, como DevOps SRE, Data Science e muito mais.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ReactJS | Hooks | Redux - Udemy</h4>
+
+              <span>2020 — 2021</span>
+
+              <p class="timeline-text">
+                Curso com mais de 200 Horas de aprendizado sobre React
+                aprofundado.
+              </p>
+
+            </li>
+
+          </ol>
 
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experiência</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Fullstack Enginner jr</h4>
+
+              <span>2022 — Present</span>
+
+              <p class="timeline-text">
+                Trabalhando com migração de plataformas legadas para web, com HTML, CSS, JS e Web Socket, junto a Delphi
+                e NodeJS com Sequelize no Back-End e frameworks para um desenvolvimento ágil e de longa vida útil de
+                código.
+                Clean Code, Testes Unitários e versionamento de código com Git.
+              </p>
+
+            </li>
+
+          </ol>
 
         </section>
 
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Kotlin</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C# | .NET and Xamarin forms</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">NodeJS | Sequelize</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java | Springboot</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Javascript</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+            
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">React</h5>
+                <data value="65">65%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Vue</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Flutter</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Aws | Cloud Computing</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">DevOps SRE</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Photoshop</h5>
+                <data value="75">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Figma</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+
+          </ul>
 
         </section>
-    </main>
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-
-    </footer>
-
-    <!--==================== SCROLL TOP ====================-->
+      </article>
 
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfólio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/henquesz/WeatherAPI" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Weather api</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/henquesz/CPUMonitoring" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.gif" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">CPU Monitoring</h3>
+
+                <p class="project-category">Desktop Development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/henquesz/Pokedex" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pokedex with PokeAPI | Vue</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/henquesz/TodoList-Vue" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Todo list with Vue + vite</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/henquesz/RickAndMorty-API" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Rick and Morty api with Vue</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/henquesz/SiteOssain" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Ossain Landing page | TCC</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/henquesz/CPFGenerator" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">CPF Generator</h3>
+
+                <p class="project-category">Mobile Application</p>
+
+              </a>
+            </li>
+
+            <!-- <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li> -->
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
